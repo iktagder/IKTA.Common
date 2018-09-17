@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="FullyBound" BoundEndpoints="1" TotalEndpoints="1">
+  <Timestamp>2017-11-29T15:35:13.4015277+01:00</Timestamp>
+  <ModuleRefCollection>
+    <ModuleRef Name="[Application:IKTA.Common]" Version="" Culture="" PublicKeyToken="" FullName="[Application:IKTA.Common], Version=, Culture=, PublicKeyToken=">
+      <Services />
+      <TrackedSchemas>
+         <Schema FullName="IKTA.Common.Schemas.v1_0.PropertySchema" AssemblyQualifiedName="IKTA.Common.Schemas.v1_0.PropertySchema,IKTA.Common.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="IKTA.Common.Schemas.v1_0.Fakturering" RootName="Fakturering" AssemblyQualifiedName="IKTA.Common.Schemas.v1_0.Fakturering,IKTA.Common.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="IKTA.Common.Schemas.FeilResponseStatus" RootName="ResponseStatus" AssemblyQualifiedName="IKTA.Common.Schemas.FeilResponseStatus,IKTA.Common.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="IKTA.Common.Schemas.ResponseStatus" RootName="ResponseStatus" AssemblyQualifiedName="IKTA.Common.Schemas.ResponseStatus,IKTA.Common.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+      </TrackedSchemas>
+    </ModuleRef>
+    <ModuleRef Name="IKTA.Common.Schemas" Version="1.0.0.0" Culture="neutral" PublicKeyToken="28f58901cad08dbb" FullName="IKTA.Common.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="IKTA.Common.Pipelines" Version="1.0.0.0" Culture="neutral" PublicKeyToken="28f58901cad08dbb" FullName="IKTA.Common.Pipelines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="IKTA.Common.Transforms" Version="1.0.0.0" Culture="neutral" PublicKeyToken="28f58901cad08dbb" FullName="IKTA.Common.Transforms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="IKTA.Common.Orchestrations" Version="1.0.0.0" Culture="neutral" PublicKeyToken="28f58901cad08dbb" FullName="IKTA.Common.Orchestrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+  </ModuleRefCollection>
+  <SendPortCollection />
+  <DistributionListCollection />
+  <ReceivePortCollection />
+  <PartyCollection xsi:nil="true" />
+</BindingInfo>

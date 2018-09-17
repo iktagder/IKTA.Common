@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Deployment Framework for BizTalk
+  Copyright (C) Thomas F. Abraham, Scott Colestock
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Installer">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">x86</Platform>
+    <SchemaVersion>1.0</SchemaVersion>
+    <ProjectName>IKTA.Common</ProjectName>
+    <ProjectVersion>1.0</ProjectVersion>
+    <IncludeSchemas>True</IncludeSchemas>
+    <IncludeOrchestrations>True</IncludeOrchestrations>
+    <IncludeTransforms>True</IncludeTransforms>
+    <IncludePipelines>True</IncludePipelines>
+    <IncludeComponents>True</IncludeComponents>
+    <IncludePipelineComponents>True</IncludePipelineComponents>
+    <IncludeCustomFunctoids>False</IncludeCustomFunctoids>
+    <IncludeVocabAndRules>False</IncludeVocabAndRules>
+    <IncludeVirtualDirectories>False</IncludeVirtualDirectories>
+    <IncludeMessagingBindings>True</IncludeMessagingBindings>
+    <IncludeDeploymentTest>False</IncludeDeploymentTest>
+    <Includelog4net>true</Includelog4net>
+    <IncludeSSO>True</IncludeSSO>
+    <IncludeEsbItineraries>False</IncludeEsbItineraries>
+    <IncludeBam>False</IncludeBam>
+    <IncludeInstallUtilForComponents>False</IncludeInstallUtilForComponents>
+    <UsingMasterBindings>True</UsingMasterBindings>
+    <RequireXmlPreprocessDirectives>False</RequireXmlPreprocessDirectives>
+    <ApplyXmlEscape>True</ApplyXmlEscape>
+    <IncludeSettingsSpreadsheetInMsi>True</IncludeSettingsSpreadsheetInMsi>
+    <SkipIISReset>False</SkipIISReset>
+    <SkipHostInstancesRestart>False</SkipHostInstancesRestart>
+    <StartApplicationOnDeploy>True</StartApplicationOnDeploy>
+    <EnableAllReceiveLocationsOnDeploy>True</EnableAllReceiveLocationsOnDeploy>
+    <StartReferencedApplicationsOnDeploy>True</StartReferencedApplicationsOnDeploy>
+    <UseIsolatedAppDomain>False</UseIsolatedAppDomain>
+    <EnableBizTalkExtendedLogging>False</EnableBizTalkExtendedLogging>
+    <EnableBizTalkAssemblyValidation>False</EnableBizTalkAssemblyValidation>
+    <EnableBizTalkCorrelationValidation>False</EnableBizTalkCorrelationValidation>
+    <EnableBizTalkSchemaValidation>False</EnableBizTalkSchemaValidation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Properties related to building an MSI for server deployments -->
+    <!-- BizTalk App Version Upgrade -->
+    <!--   For each new product release to be deployed to your BizTalk servers: -->
+    <!--     1) Increment ProductVersion -->
+    <!--     2) Generate a new GUID and update ProductId with the new GUID -->
+    <!--   This allows the new MSI to automatically uninstall (not undeploy!) the old MSI and install the new one. -->
+    <ProductVersion>1.0.0</ProductVersion>
+    <ProductId>174a06b0-1f6b-45ae-b194-9102c14d82d3</ProductId>
+    <!-- BizTalk App Version Upgrade -->
+    <ProductName>IKTA.Common</ProductName>
+    <Manufacturer>Deployment Framework User</Manufacturer>
+    <PackageDescription>IKTA.Common</PackageDescription>
+    <!-- NEVER change the ProductUpgradeCode. -->
+    <ProductUpgradeCode>a7688820-da64-455e-9ab3-2aa479086dfc</ProductUpgradeCode>
+  </PropertyGroup>
+  <!-- Under TFS Team Build, set CustomizableOutDir property to true in TFS 2005/2008/2010 UpgradeTemplate. -->
+  <!-- With a workflow build, copy the default template then modify the MSBuild task for the solution build. Set OutDir to blank and -->
+  <!-- CommandLineArguments to String.Format("/p:SkipInvalidConfigurations=true;TeamBuildOutDir=""{0}"" {1}", BinariesDirectory, MSBuildArguments). -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DeploymentFrameworkTargetsPath>$(MSBuildExtensionsPath)\DeploymentFrameworkForBizTalk\5.0\</DeploymentFrameworkTargetsPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' == ''">bin\Debug\</OutputPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' != ''">$(TeamBuildOutDir)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DeploymentFrameworkTargetsPath>$(MSBuildExtensionsPath)\DeploymentFrameworkForBizTalk\5.0\</DeploymentFrameworkTargetsPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' == ''">bin\Release\</OutputPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' != ''">$(TeamBuildOutDir)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Server'">
+    <DeploymentFrameworkTargetsPath>Framework\</DeploymentFrameworkTargetsPath>
+    <!-- Get our PDBs into the GAC so we get file/line number information in stack traces. -->
+    <DeployPDBsToGac>false</DeployPDBsToGac>
+  </PropertyGroup>
+  
+ 
+  <ItemGroup>
+    <PropsFromEnvSettings Include="SsoAppUserGroup;SsoAppAdminGroup" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Components Include="$(ProjectName).Components.dll">
+      <LocationPath>..\$(ProjectName).Components\bin\$(Configuration)</LocationPath>
+    </Components>
+  </ItemGroup>
+  <ItemGroup>
+    <Orchestrations Include="$(ProjectName).Orchestrations.dll">
+      <LocationPath>..\$(ProjectName).Orchestrations\bin\$(Configuration)</LocationPath>
+    </Orchestrations>
+  </ItemGroup>
+  <!--ItemGroup>
+    <Pipelines Include="$(ProjectName).PipelineComponents.dll">
+      <LocationPath>..\$(ProjectName).PipelineComponents\bin\$(Configuration)</LocationPath>
+    </Pipelines>
+  </ItemGroup-->
+  <ItemGroup>
+    <Pipelines Include="$(ProjectName).Pipelines.dll">
+      <LocationPath>..\$(ProjectName).Pipelines\bin\$(Configuration)</LocationPath>
+    </Pipelines>
+  </ItemGroup>
+  <ItemGroup>
+    <Schemas Include="$(ProjectName).Schemas.dll">
+      <LocationPath>..\$(ProjectName).Schemas\bin\$(Configuration)</LocationPath>
+    </Schemas>
+  </ItemGroup>
+  <ItemGroup>
+    <Transforms Include="$(ProjectName).Transforms.dll">
+      <LocationPath>..\$(ProjectName).Transforms\bin\$(Configuration)</LocationPath>
+    </Transforms>
+  </ItemGroup>
+  
+  
+  <!-- !!! TODO !!! -->
+  <Import Project="$(DeploymentFrameworkTargetsPath)BizTalkDeploymentFramework.targets" />
+  <!--
+    The Deployment Framework automatically packages most files into the server install MSI.
+    However, if there are special folders that you need to include in the MSI, you can
+    copy them to the folder $(RedistDir) in the CustomRedist target.
+    To include individual files, add an ItemGroup with AdditionalFiles elements.
+  -->
+  <Target Name="CustomRedist">
+   </Target>
+  <Target Name="CustomPostDeployTarget">
+  </Target>
+</Project>

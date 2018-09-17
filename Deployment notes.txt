@@ -1,0 +1,22 @@
+- Duplicate registry entry for HKLM/SOFTWARE/6432Node/IKTA.Common to HKLM/SOFTWARE/IKTA.Common
+Has Isolated Host User access to registry for configuration of log4Net?
+
+Add to Machine.config:  %windir%\Microsoft.NET\Framework64\[version]\config\machine.config 
+    <system.serviceModel>
+        <extensions>
+            <behaviorExtensions>
+                <add name="SanitizedFault" type="IKTA.Common.Components.WCFBehaviors.SanitizedFaultBehaviorElement, IKTA.Common.Components, Version=1.0.0.0, Culture=neutral, PublicKeyToken=28f58901cad08dbb" />
+
+Add SSO rights to Isolated Host User
+Run sql scripts
+Add Isolated Host User as dbowner for BizTlk Resources
+
+Install IKTA.Commmn
+Install IKTA.Process
+
+Check location of api application - move to SSL group if necessary
+
+
+redeploy:
+Stop and Delete applications from BizTalk Administrator
+Uninstall by using previous deplyment package or uninstall from Application managment

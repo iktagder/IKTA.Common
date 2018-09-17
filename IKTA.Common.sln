@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IKTA.Common.Deployment", "IKTA.Common.Deployment", "{E37EA578-9561-4057-B226-91DB22866EFD}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment notes.txt = Deployment notes.txt
+		IKTA.Common.Deployment\IKTA.Common.Deployment.btdfproj = IKTA.Common.Deployment\IKTA.Common.Deployment.btdfproj
+		IKTA.Common.log4net = IKTA.Common.log4net
+		IKTA.Common.Deployment\InstallWizard.xml = IKTA.Common.Deployment\InstallWizard.xml
+		IKTA.Common.Deployment\License.rtf = IKTA.Common.Deployment\License.rtf
+		IKTA.Common.Deployment\PortBindingsMaster.xml = IKTA.Common.Deployment\PortBindingsMaster.xml
+		..\PrepareDeployment.ps1 = ..\PrepareDeployment.ps1
+		IKTA.Common.Deployment\SettingsFileGenerator.xml = IKTA.Common.Deployment\SettingsFileGenerator.xml
+		IKTA.Common.Deployment\UnInstallWizard.xml = IKTA.Common.Deployment\UnInstallWizard.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.Schemas", "IKTA.Common.Schemas\IKTA.Common.Schemas.btproj", "{AB42F9A0-6E6B-4DC2-8369-7E416D26C359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.Orchestrations", "IKTA.Common.Orchestrations\IKTA.Common.Orchestrations.btproj", "{437E1512-581C-464C-B14D-E90C04453B15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.Transforms", "IKTA.Common.Transforms\IKTA.Common.Transforms.btproj", "{E3E01D89-30C8-460F-B52A-3A663285AAFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.Components", "IKTA.Common.Components\IKTA.Common.Components.csproj", "{949827F4-56DB-40AE-8FEF-065F4E27785D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.UnitTests", "IKTA.Common.UnitTests\IKTA.Common.UnitTests.csproj", "{74AB3F80-8C2D-48B5-A865-D33B1F3C2DE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IKTA.Common.SQL", "IKTA.Common.SQL", "{BBBA38D6-69F9-4132-AE36-841A4A00F3DB}"
+	ProjectSection(SolutionItems) = preProject
+		IKTA.Common.SQL\CreateAPIKey_AvailableServices.sql = IKTA.Common.SQL\CreateAPIKey_AvailableServices.sql
+		IKTA.Common.SQL\CreateArchivedMessages.sql = IKTA.Common.SQL\CreateArchivedMessages.sql
+		IKTA.Common.SQL\CreateValueMapping.sql = IKTA.Common.SQL\CreateValueMapping.sql
+		IKTA.Common.SQL\ValueMapping_Entries.sql = IKTA.Common.SQL\ValueMapping_Entries.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IKTA.Common.ExternalLibraries", "IKTA.Common.ExternalLibraries", "{B3CCB9E4-219A-406E-8ED5-2F94D1B650DF}"
+	ProjectSection(SolutionItems) = preProject
+		IKTA.Common.ExternalLibraries\log4net.dll = IKTA.Common.ExternalLibraries\log4net.dll
+		IKTA.Common.ExternalLibraries\log4net.Ext.Serializable.dll = IKTA.Common.ExternalLibraries\log4net.Ext.Serializable.dll
+		IKTA.Common.ExternalLibraries\SSOSettingsFileReader.dll = IKTA.Common.ExternalLibraries\SSOSettingsFileReader.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.Pipelines", "IKTA.Common.Pipelines\IKTA.Common.Pipelines.btproj", "{5D350D3A-B2CC-47DD-898B-916A7B864C2E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E4C3DD66-27C7-4135-AA49-709A15EA509A} = {E4C3DD66-27C7-4135-AA49-709A15EA509A}
+		{949827F4-56DB-40AE-8FEF-065F4E27785D} = {949827F4-56DB-40AE-8FEF-065F4E27785D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.PipelineComponents", "IKTA.Common.PipelineComponents\IKTA.Common.PipelineComponents.csproj", "{E4C3DD66-27C7-4135-AA49-709A15EA509A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB42F9A0-6E6B-4DC2-8369-7E416D26C359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB42F9A0-6E6B-4DC2-8369-7E416D26C359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB42F9A0-6E6B-4DC2-8369-7E416D26C359}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB42F9A0-6E6B-4DC2-8369-7E416D26C359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB42F9A0-6E6B-4DC2-8369-7E416D26C359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB42F9A0-6E6B-4DC2-8369-7E416D26C359}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{437E1512-581C-464C-B14D-E90C04453B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{437E1512-581C-464C-B14D-E90C04453B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{437E1512-581C-464C-B14D-E90C04453B15}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{437E1512-581C-464C-B14D-E90C04453B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{437E1512-581C-464C-B14D-E90C04453B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{437E1512-581C-464C-B14D-E90C04453B15}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E3E01D89-30C8-460F-B52A-3A663285AAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E01D89-30C8-460F-B52A-3A663285AAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E01D89-30C8-460F-B52A-3A663285AAFC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E3E01D89-30C8-460F-B52A-3A663285AAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E01D89-30C8-460F-B52A-3A663285AAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E01D89-30C8-460F-B52A-3A663285AAFC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{949827F4-56DB-40AE-8FEF-065F4E27785D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949827F4-56DB-40AE-8FEF-065F4E27785D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949827F4-56DB-40AE-8FEF-065F4E27785D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949827F4-56DB-40AE-8FEF-065F4E27785D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74AB3F80-8C2D-48B5-A865-D33B1F3C2DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74AB3F80-8C2D-48B5-A865-D33B1F3C2DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74AB3F80-8C2D-48B5-A865-D33B1F3C2DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74AB3F80-8C2D-48B5-A865-D33B1F3C2DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D350D3A-B2CC-47DD-898B-916A7B864C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D350D3A-B2CC-47DD-898B-916A7B864C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D350D3A-B2CC-47DD-898B-916A7B864C2E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5D350D3A-B2CC-47DD-898B-916A7B864C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D350D3A-B2CC-47DD-898B-916A7B864C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D350D3A-B2CC-47DD-898B-916A7B864C2E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E4C3DD66-27C7-4135-AA49-709A15EA509A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4C3DD66-27C7-4135-AA49-709A15EA509A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4C3DD66-27C7-4135-AA49-709A15EA509A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4C3DD66-27C7-4135-AA49-709A15EA509A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

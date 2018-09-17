@@ -1,0 +1,93 @@
+<ns0:Fakturering xmlns:ns0="http://IKTA.Common.Schemas.v1_0.Fakturaer">
+	<FraSystem>Vigilo</FraSystem>
+	<Faktura>
+		<Firma>Grimstad Kommune</Firma>
+		<TransaksjonsDato>2017-08-11</TransaksjonsDato>
+		<Ordre>
+			<EksterntOrdreNummer>040061685</EksterntOrdreNummer>
+			<OrdreLinje>
+				<LinjeNummer>1</LinjeNummer>
+				<Produkt>7010341</Produkt>
+				<Beskrivelse>Hausland bhg, 5 dager pr. uke, Navn på barn</Beskrivelse>
+				<Antall>1</Antall>
+				<EnhetsPris>2730</EnhetsPris>
+			</OrdreLinje>
+			<OrdreLinje>
+				<LinjeNummer>2</LinjeNummer>
+				<Produkt>7010391</Produkt>
+				<Beskrivelse>Fradrag I, navn på barn</Beskrivelse>
+				<Antall>-1</Antall>
+				<EnhetsPris>121</EnhetsPris>
+			</OrdreLinje>
+			<OrdreLinje>
+				<LinjeNummer>3</LinjeNummer>
+				<Produkt>7010399</Produkt>
+				<Beskrivelse>Kost navn på barn</Beskrivelse>
+				<Antall>1</Antall>
+				<EnhetsPris>262</EnhetsPris>
+			</OrdreLinje>
+		</Ordre>
+		<RessursNummer>12345Ressurs</RessursNummer>
+		<TjenesteType>20</TjenesteType>
+		<FakturaMottaker>
+			<FNr_OrgNr>01027524724</FNr_OrgNr>
+			<Navn>Mors navn</Navn>
+			<Adresse>
+				<AdresseLinje>Veste Molia 17</AdresseLinje>
+				<AdresseLinje>Andre etasje</AdresseLinje>
+				<PostNummer>4872</PostNummer>
+				<PostSted>Fevik</PostSted>
+			</Adresse>
+		</FakturaMottaker>
+		<FakturaBeskrivelse>
+			<ToppTekst1>Første linje i header</ToppTekst1>
+			<ToppTekst2>Andre linje i header</ToppTekst2>
+			<BunnTekst1>Første linje i footer</BunnTekst1>
+			<BunnTekst2>Andre linje i footer</BunnTekst2>
+		</FakturaBeskrivelse>
+	</Faktura>
+	<Faktura>
+		<Firma>Grimstad Kommune</Firma>
+		<TransaksjonsDato>2017-08-11</TransaksjonsDato>
+		<Ordre>
+			<EksterntOrdreNummer>040061141</EksterntOrdreNummer>
+			<OrdreLinje>
+				<LinjeNummer>1</LinjeNummer>
+				<Produkt>7010441</Produkt>
+				<Beskrivelse>Tønnevoldskogen bhg, 5 dager pr uke, Navn på barn</Beskrivelse>
+				<Antall>1</Antall>
+				<Enhet>mnd</Enhet>
+				<EnhetsPris>2730</EnhetsPris>
+			</OrdreLinje>
+			<OrdreLinje>
+				<LinjeNummer>2</LinjeNummer>
+				<Produkt>7010499</Produkt>
+				<Beskrivelse>Kost Navn på barn</Beskrivelse>
+				<Antall>1</Antall>
+				<Enhet>Måned</Enhet>
+				<EnhetsPris>262</EnhetsPris>
+			</OrdreLinje>
+		</Ordre>
+		<FakturaMottaker>
+			<FNr_OrgNr>01037313579</FNr_OrgNr>
+			<Navn>Fars Navn</Navn>
+			<Adresse>
+				<AdresseLinje>Åsdalen 13</AdresseLinje>
+				<PostNummer>4878</PostNummer>
+				<PostSted>Fevik</PostSted>
+			</Adresse>
+			<FaktureringsAdresse>
+				<AdresseLinje>AndreÅsdalen 13</AdresseLinje>
+				<AdresseLinje>Bortenfor sånn</AdresseLinje>
+				<PostNummer>1234</PostNummer>
+				<PostSted>Ålvik</PostSted>
+			</FaktureringsAdresse>
+		</FakturaMottaker>
+		<FakturaBeskrivelse>
+			<ToppTekst1>Første linje i header</ToppTekst1>
+			<ToppTekst2>Andre linje i header</ToppTekst2>
+			<BunnTekst1>Første linje i footer</BunnTekst1>
+			<BunnTekst2>Andre linje i footer</BunnTekst2>
+		</FakturaBeskrivelse>
+	</Faktura>
+</ns0:Fakturering>
