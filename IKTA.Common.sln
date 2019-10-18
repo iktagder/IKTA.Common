@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Common.UnitTests", "IK
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IKTA.Common.SQL", "IKTA.Common.SQL", "{BBBA38D6-69F9-4132-AE36-841A4A00F3DB}"
 	ProjectSection(SolutionItems) = preProject
+		IKTA.Common.SQL\AddNewCompanies.sql = IKTA.Common.SQL\AddNewCompanies.sql
+		IKTA.Common.SQL\AvailableServices_Entries.sql = IKTA.Common.SQL\AvailableServices_Entries.sql
 		IKTA.Common.SQL\CreateAPIKey_AvailableServices.sql = IKTA.Common.SQL\CreateAPIKey_AvailableServices.sql
 		IKTA.Common.SQL\CreateArchivedMessages.sql = IKTA.Common.SQL\CreateArchivedMessages.sql
 		IKTA.Common.SQL\CreateValueMapping.sql = IKTA.Common.SQL\CreateValueMapping.sql
